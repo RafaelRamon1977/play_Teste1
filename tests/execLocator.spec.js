@@ -1,20 +1,5 @@
 const { test, expect } = require('@playwright/test');
 
-test.use({
-    viewport: { width: 1600, height: 1200 },
-});
-//referencia para o elemento
-
-test.beforeEach(async ({ page }) => {
-    await page.goto('https://automationpratice.com.br/');
-
-});
-
-test('deve acessar acessar a homepage', async ({ page }) => {
-
-    const titulo = page.getByRole('heading', { name: ' Cadastro' });
-});
-
 test('deve preencher a tela de cadastro para logar', async ({ page }) => {
 
     const button = await page.getByRole('button', { name: 'Send Mail' });
